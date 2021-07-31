@@ -1,0 +1,7 @@
+How to print a map with for loop:
+
+    public static void printSortedMap() {
+        Map<Integer, List<String>> yearAndPublisherMap = createByYearPublisher("Libri");
+        for (Map.Entry<Integer, List<String>> entry : yearAndPublisherMap.entrySet())
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+    }

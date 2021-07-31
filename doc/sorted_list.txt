@@ -1,0 +1,17 @@
+How to sort a list:
+
+List<String> list = new ArrayList();
+        list.add("kakaó");
+        list.add("kávé");
+        list.add("alma");
+        list.add("vackor");
+        list.add("tea");
+        System.out.println(list);
+        Collections.sort(list);
+        System.out.println(list);
+
+
+Output:
+
+[kakaó, kávé, alma, vackor, tea]
+[alma, kakaó, kávé, tea, vackor]

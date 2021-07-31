@@ -1,0 +1,15 @@
+private static int findMostBooks() {
+        int max = 0;
+        Set<Category> maxKey = new HashSet<>();
+
+        for (Map.Entry<Category, List<StartingBook>> entry : booksMap.entrySet()) {
+            if (entry.getValue().size() > max) {
+                max = entry.getValue().size();
+                maxKey.clear();
+            }
+            if (entry.getValue().size() == max) {
+                maxKey.add(entry.getKey());
+            }
+        }
+        return max;
+    }

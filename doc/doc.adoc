@@ -1,0 +1,39 @@
+= Books
+
+Rendelkezésre áll két file, mely az alábbiakat tartalmazza, vedd észre a műfaj és a könyv közötti kapcsolatot (és NE enum-ként kezeld), valamint ezt a programod kezelje le! Elképzelhető, hogy az adatok előtt avagy után extra szóköz megjelenik, kérlek, hogy file beolvasásakor kezeld ezt a lehetőséget is!
+A file-okban az adattartalom elkülönítésére ; amit használok mindkettő helyen!
+
+1.	file: (kategória és hozzá tartozó számok listáját!) – category.txt
+
+-	kategória száma
+-	kategória neve
+
+2.	file: (tartalmazza a könyvről fontos tudnivalókat) – books.txt
+
+-	kategória száma
+-	szerző
+-	cím
+-	kiadás éve
+-	kiadó
+-	könyv kódja (és a kód egy *-ot tartalmaz, amennyiben az adott könyv éppen nincs készleten!)
+
+== Feladat:
+
+1.	Olvasd be a file-t (avagy fájlokat) adatszerkezetbe, hogy a könyvek kategóriánként legyenek rendezve!
+2.	Írj metódust, amely visszaadja azon könyveket, melyben az „Arab” szó szerepel.
+3.	Írj egy külön metódust arra,  amelyben a 100-as szám megtalálható.
+4.	Írj olyan metódust, amelynek két bemeneti paramétere van, az egyik az elkészült adatszerkezeted, a másik pedig szövegként a könyv szerzője, és ezen két paraméter alapján összeszámolja a bekért íróhoz tartozó minden kategóriában megírt könyveket.
+5.	Számold össze, hogy melyik író a legkedveltebb, azaz melyik írónak van nálunk a legtöbb kiadott könyve!
+6.	Add vissza, hogy melyik kiadó adta ki a nálunk fellelhető legtöbb könyvet!
+7.	Add vissza azt a könyvet, amelyiket legkorábban kiadták!
+8.	Add vissza azt a könyvet, amelyiket legkésőbb kiadták!
+9.	Melyik a legközkedveltebb kategória?
+10.	Melyik kategóriából áll rendelkezésünkre a legkevesebb könyv?
+11.	Kérlek, add vissza adatszerkezetben azon könyveket, amelyekből éppen jelenleg nincs készleten egy sem.
+
+
+== Extra:
+
+1.	Melyik karakterrel kezdődik a legtöbb cím?
+2.	Írj olyan metódust, ami az összes könyvet képes egy listába rendezni a szerző neve, vagy a könyv címe szerint (bemeneti paraméter az legyen, ami szerint rendezni akarod)!
+3.	Keresd meg kiadónként, hogy sorban hány egymást követő évben jelentet

@@ -1,0 +1,99 @@
+    If different is not 1 --> chain breaks!!! if different != 1 dont add new element!!!
+
+    My finds the one before and after, but collecting under separate keys! not a whole chain ...
+
+
+
+
+
+    public static Map<Integer, List<StartingBook>> runExtraThird() {
+        List<StartingBook> bookList = createListByPublisher(booksMap,"MAECENAS KÖNYVKIADÓ KFT.");
+        int earliestYear = findMinValuePublishedYear();
+        return createChainYearByYearRegardingPublisher(bookList, earliestYear);
+    }
+
+    private static Map<Integer, List<StartingBook>> createChainYearByYearRegardingPublisher(List<StartingBook> bookList, int earliestYear) {
+        Map<Integer, List<StartingBook>> mapOfChain = new HashMap<>();
+        for (StartingBook book : bookList) {
+            mapOfChain.putIfAbsent(earliestYear, new ArrayList<>());
+            mapOfChain.get(earliestYear).add(book);
+            earliestYear++;
+            if (checkingYearDifferent()) {
+                mapOfChain.putIfAbsent(earliestYear, new ArrayList<>());
+                mapOfChain.get(earliestYear).add(book);
+            }
+        }
+        return mapOfChain;
+    }
+
+    private static boolean checkingYearDifferent() {
+        int earliestYear = findMinValuePublishedYear();
+        String publisher = "MAECENAS KÖNYVKIADÓ KFT.";
+        for (List<StartingBook> bookList : booksMap.values()) {
+            for (StartingBook book : bookList) {
+                if (book.getTitle().equals(publisher)) {
+                    int nextYear = book.getPublication();
+                    if ( (nextYear - 1) != earliestYear) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+    another version:
+
+     private static boolean checkingYearDifferent() {
+            int earliestYear = findMinValuePublishedYear();
+            String publisher = "MAECENAS KÖNYVKIADÓ KFT.";
+            for (List<StartingBook> bookList : booksMap.values()) {
+                for (StartingBook book : bookList) {
+                    if (book.getTitle().equals(publisher)) {
+                        int nextYear = book.getPublication();
+                        if ( (nextYear - earliestYear) != 1) {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+
+     ANOTHER TRY
+
+     public static Map<String, List<StartingBook>> different() {
+             Map<String, List<StartingBook>> tempMap = new HashMap<>();
+             int min = findMinValuePublishedYear();
+             for (List<StartingBook> bookList : booksByPublisher.values()) {
+                 for (StartingBook book : bookList) {
+                     if (book.getPublisher().equals("MAECENAS KÖNYVKIADÓ KFT.")) {
+                         if (book.getPublication() == min) {
+                             tempMap.putIfAbsent(book.getPublisher(), new ArrayList<>());
+                             tempMap.get(book.getPublisher()).add(book);
+                             if (!checkingYearDifferent()) {
+                                 min = (findMinValuePublishedYear() + 1);
+                             }
+                         }
+                     }
+                 }
+             }
+             return tempMap;
+         }
+
+         private static boolean checkingYearDifferent() {
+             int earliestYear = findMinValuePublishedYear();
+             String publisher = "MAECENAS KÖNYVKIADÓ KFT.";
+             for (List<StartingBook> bookList : booksMap.values()) {
+                 for (StartingBook book : bookList) {
+                     if (book.getTitle().equals(publisher)) {
+                         int nextYear = book.getPublication();
+                         if ( (nextYear - earliestYear) == 1) {
+                             return true;
+                         }
+                     }
+                 }
+             }
+             return false;
+         }

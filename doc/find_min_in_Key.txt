@@ -1,0 +1,15 @@
+private static int findLessBooks() {
+        int min = Integer.MAX_VALUE;
+        Set<Category> minKey = new HashSet<>();
+
+        for (Map.Entry<Category, List<StartingBook>> entry : booksMap.entrySet()) {
+            if (entry.getValue().size() < min) {
+                min = entry.getValue().size();
+                minKey.clear();
+            }
+            if (entry.getValue().size() == min) {
+                minKey.add(entry.getKey());
+            }
+        }
+        return min;
+    }

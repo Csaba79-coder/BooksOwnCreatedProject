@@ -1,0 +1,82 @@
+1. Creating classes!!! --> DONE
+1.1 Categories: --> DONE
+    - int ID;
+    - String category;
+
+1.2 Books: --> DONE
+    - Categories category; (but can be something else ... like list or array or map ... we will see!)
+    - String writer;
+    - String title;
+    - ing publication;
+    - String publisher;
+    - String code;
+    and not included in constructor:
+    - boolean isRunOut (default is false) - its because of special character: * that shows what is running out
+      (with setter only change the default value to true - during reading the file and doing instance when the * is there!)
+
+2. FileHandler: --> DONE
+2.1 Reading the first txt into a map  --> DONE
+(where int num is the key, and the value is: int num and String category)
+2.2 Reading the second txt into a map  --> DONE
+(where the key is the map of categories, and value is the map + the rest data's!)
+
+3. First task is to read the data's by categories! - best solution read to map! this one was done at creating the FileHandler Class! --> DONE
+
+4. Write a method that gives back the whole instance that includes the word "Arab"! --> DONE
+
+5. Write a separate method that gives back the whole instance that includes the number: 100! --> DONE
+
+PAY attention! The above mentioned tasks are the same, can use the same method!!! --> DONE
+
+6. Write a method that has to parameters (one is them map made by the first task! and the second is the writer!) - for
+these 2 parameters write a method that gives back the number of the books they they have (no matter the category!)  --> DONE
+
+7. Count - who is the favourite writer, i.e. who has the most books!
+7.1 I made a new map during reading the file into map, that collected the books into a map where the value is the writer, key is the rest!
+7.2 Write a function that gives back the max value of a book belongs to the same writer (so max value of the list that belongs to the key!)
+7.3 Find all the writer that has the same amount of books as the max value (and give back in set the String writer)
+I used set here because I don't need duplication in the writer's names, when I added them to a String list!   --> DONE
+
+8. Count - who is the favourite publisher, i.e. which publisher has the most amount of books!
+8.1 I made a new map during reading the file into map, that collected the books into a map where the value is the publisher, key is the rest!
+8.2 Write a function that gives back the max value of a book belongs to the same publisher (so max value of the list that belongs to the key!)
+8.3 Find all the publisher that has the same amount of books as the max value (and give back in set the String publisher)
+I used set here because I don't need duplication in the publisher's names, when I added them to a String list!   --> DONE
+
+
+9. Find the book or books that published earliest!
+9.1 I made a new map, where the key is the year and the value is the book itself (just for practice how to find min value in key!!!)
+9.2 Iterating through keys, and find the smallest number
+9.3 If we found the smallest number iterating through the map, and collect all items (book/booka) those were issued in that year!    --> DONE
+
+10. SAME as plan 9, but finding the max instead of min value!!!     --> DONE
+
+11-12. Find the most favourite category and find the less beloved category is the same as above mentioned, the only difference is to use the original map!     --> DONE
+
+13. To tell which book is run out in the original map, when I read the data's I created a field (not included in constructor)
+that was a boolean isRunOut. The default value was false --> that means as default value we have it on stock!!!
+With the boolean setter when I found during reading the file into map a * symbol, the setter changed its status to true i.e. we run out of it!
+I made a function which checks the value of the boolean and if the value is true collect the whole instance into a list!   --> DONE
+
+
+Extra/Bonus:
+1. Check the first character of the titles and add into a new map! Then check size of the map! (already the Strings are trimmed!!!)
+Collecting into a list all items that starts with the same character (which is the max!) so similar like the previous 2!   --> DONE
+
+2. Give back by writer or title! I will write both codes!   --> DONE
+
+3. Find, if any publisher issued a book year by year after each other! I'm using the map that collects the books by publishers!
+I will search for min value of the years, but I think already done! name of the method: findMinValuePublishedYear(); (anyway I also have the max value!).
+But I wanted to start at the oldest book till the newest!
+So the first element of the chain is this instance that has this publishing year (the year is given back by the method!) findMinValuePublishedYear(); --> I need to make a new one!!!
+and runSeventh() gives back a list, maybe I can use! List<StartingBook> earliestPublishedBook = BookController.runSeventh(); this is the first book!
+
+If different is not 1 --> chain breaks!!! if different != 1 dont add new element!!!
+
+My finds the one before and after, but collecting under separate keys! not a whole chain ... solved with recursion!  --> DONE
+
+
+DONE - ALL DONE!!!
+
+
+

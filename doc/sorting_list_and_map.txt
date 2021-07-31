@@ -1,0 +1,18 @@
+Sorting list:
+
+public static
+<T extends Comparable<? super T>> List<T> asSortedList(Collection<T> c) {
+  List<T> list = new ArrayList<T>(c);
+  java.util.Collections.sort(list);
+  return list;
+}
+
+SORTED SET!!! :)
+
+https://stackoverflow.com/questions/22391350/how-to-sort-a-hashset/29625277
+
+    private static TreeMap<Integer, List<String>> sortMapByKey() {
+        TreeMap<Integer, List<String>> sortedByKey = new TreeMap<>();
+        createByYearPublisher("MAECENAS KÖNYVKIADÓ KFT.").putAll(sortedByKey);
+        return sortedByKey;
+    }

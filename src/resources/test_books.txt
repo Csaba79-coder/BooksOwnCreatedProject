@@ -1,0 +1,13 @@
+1;Leiner Laura;Nélküled;L&L Kiadó;2016;RE-1436*
+1;Danielle Steel;Rejtőzködve;MAECENAS KÖNYVKIADÓ KFT.;2003;RE-1657
+1;Danielle Steel;A gyűrű;MAECENAS KÖNYVKIADÓ KFT.;2005;RE-1017
+1;Danielle Steel;Palomino;MAECENAS KÖNYVKIADÓ KFT.;2004;RE-0014;
+1;Danielle Steel;Vele vagy nélküle;MAECENAS KÖNYVKIADÓ KFT.;2006;RE-3467
+1;Danielle Steel;Egy tökéletes idegen;MAECENAS KÖNYVKIADÓ KFT.;2008;RE-5472*
+1;Danielle Steel;Szerelmes nyárutó;MAECENAS KÖNYVKIADÓ KFT.;2007;RE-3667
+1;Udo Ulfkotte;A menekültipar;Patmos Records;2011;RE-3497
+2;Kotra Károly;Interaktív KRESZ könyv személygépkocsivezetők részére;KONTRA Kereskedelmi és Oktató Kft.;2019;IT-6474
+3;Johanna Basford;Titkos Kert- Színezőköhnyv mesébe illő rajzokkal;Manó Könyvek;2014;ME-6487
+8;Elizabeth Gilbert;Big Magic;Partvonal Könyvkiadó;2016;SC-6488
+5;Borsa Brown;Az Arab szeretője;Álomgyár Kiadó;2016;RO-3456
+1;Borsa Brown;Az Arab;Álomgyár Kiadó;2020;RE-6749
