@@ -31,7 +31,7 @@ public class Processor {
             List<Book> theMostFirstCharInSentence = BookController.runExtraFirst();
             List<Book> bookListByWriter = BookController.runExtraSecondByWriter();
             List<Book> bookListByPublisher = BookController.runExtraSecondByPublisher();
-            // https://www.geeksforgeeks.org/sortedset-java-examples/ insted of map!
+            // https://www.geeksforgeeks.org/sortedset-java-examples/ instead of map!
             Map<String, List<Book>> chainByYearsAndPublisherAVersion = BookController.runExtraThirdAVersion();
             List<String> chainByYearsAndPublisherBVersion = BookController.runExtraThirdBVersion();
 
